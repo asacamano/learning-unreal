@@ -8,6 +8,8 @@ Information I'm collecting as I learn to make a game in Unreal Engine 5.
 
 Obvious, and very important. +100
 
+* Follow the GitHub Pages [Quickstart](https://docs.github.com/en/pages/quickstart).
+
 ## Reveal.js for slides
 
 [Reveal JS](https://revealjs.com/).

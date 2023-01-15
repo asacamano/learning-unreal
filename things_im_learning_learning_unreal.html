@@ -1,0 +1,302 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/league.css">
+  <!--https://stackoverflow.com/a/21468200-->
+  <style type="text/css">
+    p {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <textarea data-template>
+# Things I'm learning
+## while learning Unreal Engine
+
+Andrew Sacamano
+
+<span style="font-size: 0.7em">January 2023</span>
+
+<span style="font-size: 0.7em">Press "S" to see the speaker notes.</span>
+---
+# #1
+
+## It's is kind of obvious but...
+---
+# OMG
+
+## ...making a game is a lot of work
+
+Note:
+
+We could just end there, but maybe people want to know a bit more.
+---
+About a six months ago I set out to make a game.
+* I was lured by newly released Unreal Engine 5.
+* It made real-time photorealistic environments available on average hardware.
+* Like this: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z_YtgBtLNeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Note:
+
+It is a simple game. But I wanted it to be graphically very beautiful and lush and rich - and photorealistic.
+---
+Bonus: Unreal has [friendly](https://www.unrealengine.com/en-US/faq)
+[licencing]((https://www.unrealengine.com/en-US/license)) terms...
+
+> *A 5% royalty is due only if you are distributing an off-the-shelf product
+> that incorporates Unreal Engine code (such as a game) and the lifetime gross
+> revenue from that product exceeds $1 million USD; in this case, the first $1
+> million remains royalty-exempt.*
+
+I'm not going to make a million dollars of this, so... it's free!
+
+Note:
+
+Compare this to Unity - which is another very popular choice:
+
+* Free, but limit supported platforms with the free version.
+* More to the point, you have to pay $40 / mo to get your own
+  splash screen... 
+* Up to $200K annual revenue / funding - then you got to $180 mo.
+
+I didn't want to pay a subscription for a hobby I might suck at. And I didn't 
+expect to make money, but maybe?
+---
+Comparing Unreal with [Unity](https://unity.com/) (the main alternative).
+
+* Both Unreal and Unity have lots of free content.
+* Both can do really realistic scenes - Unreal might be better at *big* realistic scenes.
+* Both have marketplaces with lots of assets to buy.
+* Unity has good docs.  Unreal is a bit more like Google - "try it, you'll figure it out...."
+* Unity is game focused. Unreal also does has VFX, Architecture, Automotive Design tools.
+
+Note: I don't read manuals that much anyway...
+---
+Read these docs:
+
+* Marcos Romero's [Blueprints Compendium Vol 1,2,3](https://romeroblueprints.blogspot.com/p/table-of-contents.html)
+* Cedric Neukirchen's [Network Compendium](https://cedric-neukirchen.net/)
+
+
+Note:
+
+These sources are quite to-the-point, and reasonably short. I would recommend just reading them.
+
+The Unreal docs are just as bad as everyone says.  They're good if you already know what
+you're doing, but really hard as a beginner.
+---
+Also - YouTube is your friend. There's a lot of good content on YouTube.  
+
+I especially likese these on YouTube:
+
+* [Unreal Engine Official](https://www.youtube.com/@UnrealEngine)
+* [William Faucher](https://www.youtube.com/@WilliamFaucher)
+* [Unreal Sensei](https://www.youtube.com/@UnrealSensei)
+
+And I liked this instructor on Udemy:
+
+* [Gavin Eisen](https://www.udemy.com/user/gavin-eisenbeisz/?src=sac&kw=Gavin+Eisenbeisz)
+
+
+Note:
+
+There's there's also a lot of very low-quality stuff.
+
+And some of the free content is "look how quickly an expert can do this - and I'll show you 80% of the steps."
+---
+# Surprises
+---
+Finding a good 3D workflow is tricky. No tool solves all the parts easily for novice users:
+
+* **Modeling**: Blender, Unreal, AutoCAD, SketchUp, Adobe
+* **Texturing**: Blender, Quixel Mixer, Armour Paint, Adobe
+* **Animation**: Blender, a bunch of stuff I don't know.
+
+But Interoperability is not smooth.
+
+Note:
+
+Interoperability is not guaranteed, standards are there, but they are very much lowest-common-denominator, and
+the pro market drives this.  Hobby work is definitely an afterthought.
+
+Specifically, I spent several days learning to get beautiful objects in Blender, only to realize that 90% of
+the work I did in Blender could not be exported into Unreal (even with the dedicated plugins).
+
+It all comes down to a the rendering engine.
+---
+Each Game engine, and Blender, and other tools, has their own rendering engine / pipeline / process. 
+
+* It is part of their competitive advantage.
+* Basic 3D meshes models work fine across all.
+* Some parts of texturing work OK, but the each treat light differently.
+* They each have "magical" features that are really useful, but incompatible.
+
+---
+I used Upwork to hire some help - and was really happy with how it worked out.
+
+* I used the logic of "What would I pay a college student in Munich for this?"
+* I got plenty of bids.
+* It was a small project, so I asked three people to each do it.
+* None of the results were bad, but one really stood out - so I'm going to keep working with them.
+---
+Sound is more straightforward - the formats are more standard.
+
+But sound in games is tricky.
+
+* With a movie, there is "off-camera". In a game, if you can hear it, it needs to be in the scene.
+* When the player controls the narrative, repetition is more obvious.
+---
+Unreal has 2 programming models: C++ and Blueprints.
+
+* Blueprints use a "dataflow" programming paradigm.
+* C++ is C++ (kind of...)
+
+Note:
+
+I expected 3D graphics and sound to be hard - I'm a total noob.  But even programming took me by surprise.
+---
+Blueprints:
+
+![Blueprint example showing a branch](things_im_learning_learning_unreal_images/blueprints.png)
+
+Note:
+
+This shows the camera being raised and lowered as the player stands or sits.
+* ToggleSit is an event.
+* "Sitting" is a variable.
+* The white lines are "control" lines - things activate when the control line is "active".
+
+---
+More Blueprints:
+
+![Blueprint example showing a sequence](things_im_learning_learning_unreal_images/blueprints_2.png)
+
+Note:
+
+This shows:
+* cleaning up the current phase, if it exists
+* incrementing a counter (if there is more to do)
+* starting the new phase.
+
+It took me a while to realize that without the sequence operator, order of execution is undefined.
+
+References to variables are actually by reference.
+
+---
+Blueprints pros:
+
+* Super quick and easy to write and debug for simple wiring jobs.
+* Error handling is easy - ignore it (mostly).
+
+Blueprints cons
+
+* Not text based, can't diff versions.
+* Can be tricky/verbose/big/hard-to-read for complex logic.
+
+---
+C++ is not quite standard C++.
+
+* Need to ship on Windows, Mac, Android, iOS, Linux, XBox, Playstation.
+* Should never, never, never, never crash.
+
+Therefor:
+* No `new` , `malloc`, or `free`.
+* No stdlib, or any other C++ standard library.
+* "== null" is not a thing - you need "isValid"
+---
+C++ Example:
+![C++ example showing some string handling](things_im_learning_learning_unreal_images/cplusplus.png)
+
+Note:
+
+* Custom array class.
+* Custom string types and methods.
+* Two kinds of string (localizable and not)
+* etc...
+---
+C++ pros:
+
+* It's C++ - you can do just about anything.
+* Some of the API is only available to C++.
+
+C++ cons:
+
+* Not standard C++.
+  * e.g. No [statics](https://forums.unrealengine.com/t/static-variables-possible/6841). No
+    [exceptions](https://forums.unrealengine.com/t/how-can-i-enable-unwind-semantics-for-c-style-exceptions/284934).
+* There's a complex build chain, it only works with Visual Studio (VS Code Support is in beta, it didn't work for me.)
+
+Note:
+
+There's a bunch of custom header and project generation and pre-processing. I could never get that to work in VS Code.
+
+Pick a style guide and follow it - I use https://docs.unrealengine.com/5.0/en-US/recommended-asset-naming-conventions-in-unreal-engine-projects/,
+https://github.com/Allar/ue5-style-guide.
+---
+Blueprints seem to be [more popular](https://www.reddit.com/r/unrealengine/comments/10bsyk4/are_you_using_blueprints_or_c/).
+
+* You can use either or [both](https://unrealcommunity.wiki/mixing-blueprints-and-cpp-8keheovh) in a project.
+* You can "switch".
+---
+Unreal is not a library. It's a framework.
+
+If you don't do things the "Unreal" way, you're going to have a bad time.
+
+[![Upgoer 5 Detail from XKCD](things_im_learning_learning_unreal_images/upgoer_detail.png)](https://xkcd.com/1133/)
+---
+No such thing as single-player.
+
+* My game is really targeting single-player mode.
+* But Unreal is very much multi-player.
+* If you don't know how Unreal handles multi-player - which things are on the server,
+ which on the client, and how they communicate - lots of things just don't work.
+
+ So basically, you need to learn the multi-player model, and then write a single-player
+ mode.
+---
+# Final thoughts
+---
+### Prototype first.
+
+Polished graphics take a lot of work, and might be hard to reuse.
+
+Note:
+---
+### Freelancers are your friend.
+
+If you can, it's so much easier to pay for something than to make it.
+
+Asset libraries are cheaper than freelancers.
+---
+### Know why you are making a game.
+
+It's a [huge time sync](https://www.engadget.com/2015-02-06-the-witness-money.html).
+It's a [terrible career move](https://www.wired.com/2021/05/geeks-guide-jason-schreier/).
+Figure out what you want to get out of it, and focus on that.
+        </textarea>
+      </section>
+    </div>
+  </div>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      plugins: [RevealMarkdown, RevealNotes],
+      slideNumber: true,
+      hashOneBasedIndex: true,
+      hash: true,
+
+    });
+  </script>
+</body>
+
+</html>

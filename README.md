@@ -2,6 +2,18 @@
 
 Information I'm collecting as I learn to make a game in Unreal Engine 5.
 
+## Presentation
+
+I shared [this](things_im_learning_learning_unreal.html) with colleagues at work.
+
+## Documentation
+
+My must-read, keep coming back to it Unreal documentation:
+
+* Marcos Romero's [Blueprints Compendium Vol 1,2,3](https://romeroblueprints.blogspot.com/p/table-of-contents.html)
+* Cedric Neukirchen's [Network Compendium](https://cedric-neukirchen.net/)
+
+
 ## Tools used in building this site
 
 ## GitHub

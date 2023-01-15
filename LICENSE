@@ -5,6 +5,11 @@ Third party code:
 * dist/ and plugins/ - from https://github.com/hakimel/reveal.js/archive/master.zip, under
   the [MIT License](https://github.com/hakimel/reveal.js/blob/master/LICENSE).
 
+* upgoer5_detail.png is a detail of https://xkcd.com/1133/, which is "licensed under a
+  Creative Commons Attribution-NonCommercial 2.5 License." https://xkcd.com/license.html.
+
+Creative Commons Attribution-NonCommercial 2.5 License.
+
 All other parts of this folder are licensed according to "CC0 1.0 Univeral",
 see below.
 

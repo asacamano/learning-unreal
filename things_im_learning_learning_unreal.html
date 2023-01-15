@@ -19,9 +19,7 @@
 # Things I'm learning
 ## while learning Unreal Engine
 
-Andrew Sacamano
-
-<span style="font-size: 0.7em">January 2023</span>
+Andrew Sacamano - 2023 January
 
 <span style="font-size: 0.7em">Press "S" to see the speaker notes.</span>
 ---
@@ -56,7 +54,7 @@ Bonus: Unreal has [friendly](https://www.unrealengine.com/en-US/faq)
 > revenue from that product exceeds $1 million USD; in this case, the first $1
 > million remains royalty-exempt.*
 
-I'm not going to make a million dollars of this, so... it's free!
+I'm not going to make a million dollars from this, so... it's free!
 
 Note:
 
@@ -75,8 +73,8 @@ Comparing Unreal with [Unity](https://unity.com/) (the main alternative).
 * Both Unreal and Unity have lots of free content.
 * Both can do really realistic scenes - Unreal might be better at *big* realistic scenes.
 * Both have marketplaces with lots of assets to buy.
-* Unity has good docs.  Unreal is a bit more like Google - "try it, you'll figure it out...."
-* Unity is game focused. Unreal also does has VFX, Architecture, Automotive Design tools.
+* Unity has good docs.  Unreal is a bit more like... "try it, you'll figure it out ;)"
+* Unity is game focused. Unreal also supports has VFX, Architecture, Automotive Design.
 
 Note: I don't read manuals that much anyway...
 ---
@@ -95,7 +93,7 @@ you're doing, but really hard as a beginner.
 ---
 Also - YouTube is your friend. There's a lot of good content on YouTube.  
 
-I especially likese these on YouTube:
+I especially like these channels on YouTube:
 
 * [Unreal Engine Official](https://www.youtube.com/@UnrealEngine)
 * [William Faucher](https://www.youtube.com/@WilliamFaucher)
@@ -120,7 +118,7 @@ Finding a good 3D workflow is tricky. No tool solves all the parts easily for no
 * **Texturing**: Blender, Quixel Mixer, Armour Paint, Adobe
 * **Animation**: Blender, a bunch of stuff I don't know.
 
-But Interoperability is not smooth.
+But interoperability is not smooth.
 
 Note:
 
@@ -136,8 +134,8 @@ Each Game engine, and Blender, and other tools, has their own rendering engine /
 
 * It is part of their competitive advantage.
 * Basic 3D meshes models work fine across all.
-* Some parts of texturing work OK, but the each treat light differently.
-* They each have "magical" features that are really useful, but incompatible.
+* Some parts of texturing work OK, but they each model light and materials differently.
+* They each have "magical" features that are really useful, but incompatible with the others.
 
 ---
 I used Upwork to hire some help - and was really happy with how it worked out.
@@ -153,6 +151,10 @@ But sound in games is tricky.
 
 * With a movie, there is "off-camera". In a game, if you can hear it, it needs to be in the scene.
 * When the player controls the narrative, repetition is more obvious.
+
+Note:
+
+So a lot of commercially available samples might not work well in games.
 ---
 Unreal has 2 programming models: C++ and Blueprints.
 
@@ -195,24 +197,31 @@ Blueprints pros:
 
 * Super quick and easy to write and debug for simple wiring jobs.
 * Error handling is easy - ignore it (mostly).
+* Really quick code / test cycle.
 
 Blueprints cons
 
 * Not text based, can't diff versions.
-* Can be tricky/verbose/big/hard-to-read for complex logic.
+* Can be tricky, big, and hard-to-read for complex logic.
 
 ---
-C++ is not quite standard C++.
+Unreal C++ is not quite standard C++.
+
+I suspect this is because: 
 
 * Need to ship on Windows, Mac, Android, iOS, Linux, XBox, Playstation.
 * Should never, never, never, never crash.
 
 Therefor:
+
 * No `new` , `malloc`, or `free`.
 * No stdlib, or any other C++ standard library.
-* "== null" is not a thing - you need "isValid"
+* No [statics](https://forums.unrealengine.com/t/static-variables-possible/6841).
+* No [exceptions](https://forums.unrealengine.com/t/how-can-i-enable-unwind-semantics-for-c-style-exceptions/284934).
+* Little things: "== null" is not useful - you need a special "isValid" function.
 ---
 C++ Example:
+
 ![C++ example showing some string handling](things_im_learning_learning_unreal_images/cplusplus.png)
 
 Note:
@@ -226,12 +235,11 @@ C++ pros:
 
 * It's C++ - you can do just about anything.
 * Some of the API is only available to C++.
+* "Live coding" but only for some kinds of changes.
 
 C++ cons:
 
 * Not standard C++.
-  * e.g. No [statics](https://forums.unrealengine.com/t/static-variables-possible/6841). No
-    [exceptions](https://forums.unrealengine.com/t/how-can-i-enable-unwind-semantics-for-c-style-exceptions/284934).
 * There's a complex build chain, it only works with Visual Studio (VS Code Support is in beta, it didn't work for me.)
 
 Note:
@@ -244,7 +252,15 @@ https://github.com/Allar/ue5-style-guide.
 Blueprints seem to be [more popular](https://www.reddit.com/r/unrealengine/comments/10bsyk4/are_you_using_blueprints_or_c/).
 
 * You can use either or [both](https://unrealcommunity.wiki/mixing-blueprints-and-cpp-8keheovh) in a project.
-* You can "switch".
+* You can "switch" between them pretty easily.
+---
+Testing
+
+I haven't found a real "unit test" tool. But there are some automated tests:
+
+* You can run "behavioral" tests in-game, control a player and make it do things.
+* You can make dedicated "testing levels".
+
 ---
 Unreal is not a library. It's a framework.
 
@@ -270,17 +286,21 @@ Polished graphics take a lot of work, and might be hard to reuse.
 
 Note:
 ---
-### Freelancers are your friend.
+### Freelancers are your friends.
 
-If you can, it's so much easier to pay for something than to make it.
+Until you're really an expert, it's so easier to pay for something than to make it.
+---
+### Asset libraries are cheaper than freelancers.
 
-Asset libraries are cheaper than freelancers.
+Even professionals prefer buying from a library than building from scratch.
 ---
 ### Know why you are making a game.
 
 It's a [huge time sync](https://www.engadget.com/2015-02-06-the-witness-money.html).
 It's a [terrible career move](https://www.wired.com/2021/05/geeks-guide-jason-schreier/).
 Figure out what you want to get out of it, and focus on that.
+---
+# Discussion?
         </textarea>
       </section>
     </div>

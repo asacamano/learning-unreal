@@ -35,6 +35,11 @@ Note:
 
 We could just end there, but maybe people want to know a bit more.
 ---
+## Disclaimer
+
+I am not an expert (or a lawyer).  There are many things I don't know about, and many
+things I'm describing are probably the view of a noob who doesn't know anything.
+---
 About a six months ago I set out to make a game.
 * I was lured by newly released Unreal Engine 5.
 * It made real-time photorealistic environments available on average hardware.
@@ -74,7 +79,7 @@ Comparing Unreal with [Unity](https://unity.com/) (the main alternative).
 * Both can do really realistic scenes - Unreal might be better at *big* realistic scenes.
 * Both have marketplaces with lots of assets to buy.
 * Unity has good docs.  Unreal is a bit more like... "try it, you'll figure it out ;)"
-* Unity is game focused. Unreal also supports has VFX, Architecture, Automotive Design.
+* Unity is game focused. Unreal also supports VFX, Architecture, Automotive Design.
 
 Note: I don't read manuals that much anyway...
 ---
@@ -216,8 +221,7 @@ Therefor:
 
 * No `new` , `malloc`, or `free`.
 * No stdlib, or any other C++ standard library.
-* No [statics](https://forums.unrealengine.com/t/static-variables-possible/6841).
-* No [exceptions](https://forums.unrealengine.com/t/how-can-i-enable-unwind-semantics-for-c-style-exceptions/284934).
+* No [statics](https://forums.unrealengine.com/t/static-variables-possible/6841) or [exceptions](https://forums.unrealengine.com/t/how-can-i-enable-unwind-semantics-for-c-style-exceptions/284934).
 * Little things: "== null" is not useful - you need a special "isValid" function.
 ---
 C++ Example:

@@ -13,7 +13,7 @@ Must-read, keep coming back to it Unreal documentation:
 
 ### UMG, Slate, C++, and Blueprints
 
-* Ben's [UI pages](https://benui.ca/unreal/ui-cpp-basics/) - like this page but better.
+* Ben's [UI pages](https://benui.ca/unreal/ui-cpp-basics/) - like this page but so much better.
 
 ## Presentation
 
